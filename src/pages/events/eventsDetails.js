@@ -22,29 +22,15 @@ import password_poster from "../../images/password/password-poster.png";
 import pswdwinnerone from "../../images/password/pswdwinnerone.jpg";
 import pswdwinnertwo from "../../images/password/pswdwinnertwo.jpg";
 import pswdwinnerthree from "../../images/password/pswdwinnerthree.jpg";
-import styles from "./events.module.css";
-const imgStyle = {
-  width: "38vw",
-  height: "auto",
-  borderRadius: "10px",
-};
-const boxArea = {
-  display: "flex",
-  flexDirection: "row",
-  flexWrap: "wrap",
-  justifyContent: "space-between",
-};
-const leftArea = {
-  width: "40vw",
-  height: "auto",
-  padding: "20px 20px 20px 40px",
-};
-const rightArea = {
-  width: "40vw",
-  height: "auto",
-  padding: "20px 40px 20px 20px",
-};
+
+import cyber21 from "../../images/cyber-o-day-2/cod2-1.jpeg";
+import cyber22 from "../../images/cyber-o-day-2/cod2-2.jpeg";
+
+import Carousel from "./carousel";
+
 export const eventsDetails = [
+  
+
   {
     number: "00",
     name: "Adrenaline/FOSS Day",
@@ -53,88 +39,11 @@ export const eventsDetails = [
     details: (
       <>
         <br />
-        <div className={styles.box}>
-          <div className={styles.leftArea}>
-            <div
-              id="carouselExampleIndicators"
-              className={"carousel slide " + styles.imgStyle}
-              data-bs-ride="carousel"
-            >
-              <div class="carousel-indicators">
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide-to="0"
-                  class="active"
-                  aria-current="true"
-                  aria-label="Slide 1"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide-to="1"
-                  aria-label="Slide 2"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide-to="2"
-                  aria-label="Slide 3"
-                ></button>
-              </div>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img
-                    loading="lazy"
-                    className={styles.imgStyle}
-                    src={speaker}
-                    alt="The guest speaker enlightening students about FOSS"
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    loading="lazy"
-                    className={styles.imgStyle}
-                    src={winnerOne}
-                    alt="The guest speaker enlightening students about FOSS"
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    loading="lazy"
-                    className={styles.imgStyle}
-                    src={winnerTwo}
-                    alt="The guest speaker enlightening students about FOSS"
-                  />
-                </div>
-              </div>
-              <button
-                class="carousel-control-prev"
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="prev"
-              >
-                <span
-                  class="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button
-                class="carousel-control-next"
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="next"
-              >
-                <span
-                  class="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
+        <div className="flex flex-col justify-between md:flex-row">
+          <div className="w-4/5 py-5 px-5 md:w-2/5">
+            <Carousel images={[speaker, winnerOne, winnerTwo]}/>
           </div>
-          <div className={styles.rightArea}>
+          <div className="w-4/5 py-5 px-5 md:w-2/5">
             <p>
               Held on the 17th March, 2022, Adreanline/FOSS Day was a one-day
               event for participants to show-off their familiarity with
@@ -142,11 +51,14 @@ export const eventsDetails = [
               their projects to an industry expert.
             </p>
             <p>
-              <br />A total of <strong>20 participants</strong> took part with
-              1-3 pariticipants in each team. They used FOSS (free and
-              open-source software) resources from a number of fields including
-              computer vision, web scraping, web automation and blockchain
-              technologies.
+              <br />A total of{" "}
+              <strong className="italic font-bold text-[#ebcb8b]">
+                20 participants
+              </strong>{" "}
+              took part with 1-3 pariticipants in each team. They used FOSS
+              (free and open-source software) resources from a number of fields
+              including computer vision, web scraping, web automation and
+              blockchain technologies.
             </p>
             The two winning teams were:
             <ol>
@@ -201,6 +113,7 @@ export const eventsDetails = [
       </>
     ),
   },
+  
   {
     number: "01",
     name: "Rescue Tux",
@@ -208,87 +121,45 @@ export const eventsDetails = [
     id: "rescue-tux",
     details: (
       <>
-        <div className={styles.box}>
-          <div className={styles.leftArea}>
+        <div className="flex flex-col justify-between md:flex-row">
+          <div className="w-4/5 py-5 px-5 md:w-2/5">
             <p>
               The Linux Club at VIT Chennai organized the <i>Rescue Tux</i>{" "}
               event on 21st August 2022,{" "}
-              <strong>sponsored by GeeksForGeeks</strong>. The event saw the
-              participation of about <strong>180 attendees</strong>, who enjoyed
-              a Linux workshop by the club's President Beleswar Prasad Padhi and
-              Vice President Samridh Anand Paatni, followed by lunch. The
-              participants also took part in a CTF event featuring challenges
-              created by LUG members, with the CTF platform developed by the VP
-              and President. Finally, the winners of the CTF were awarded
-              prizes.
+              <strong className="italic font-bold text-[#ebcb8b]">
+                sponsored by GeeksForGeeks
+              </strong>
+              . The event saw the participation of about{" "}
+              <strong className="italic font-bold text-[#ebcb8b]">
+                180 attendees
+              </strong>
+              , who enjoyed a Linux workshop by the club's President Beleswar
+              Prasad Padhi and Vice President Samridh Anand Paatni, followed by
+              lunch. The participants also took part in a CTF event featuring
+              challenges created by LUG members, with the CTF platform developed
+              by the VP and President. Finally, the winners of the CTF were
+              awarded prizes.
             </p>
             <p>The top three teams that emerged victorious were as follows:</p>
             <ol>
               <li>
-                Team <strong>EchoHelloWorld</strong>, who received a prize of
-                Rs.3000
+                Team{" "}
+                <strong className="italic font-bold text-[#ebcb8b]">
+                  EchoHelloWorld
+                </strong>
+                , who received a prize of Rs.3000
               </li>
               <li>
-                Team <strong>Ashwin Ponnur,Vishnu Sujith Krurp</strong>, who
-                received a prize of 2000 rs.
+                Team{" "}
+                <strong className="italic font-bold text-[#ebcb8b]">
+                  Ashwin Ponnur,Vishnu Sujith Krurp
+                </strong>
+                , who received a prize of 2000 rs.
               </li>
             </ol>
           </div>
-          <div className={styles.rightArea}>
-            <div
-              id="carouselExampleIndicators"
-              className={"carousel slide " + styles.imgStyle}
-              data-bs-ride="carousel"
-            >
-              <div class="carousel-indicators">
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide-to="0"
-                  class="active"
-                  aria-current="true"
-                  aria-label="Slide 1"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide-to="1"
-                  aria-label="Slide 2"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide-to="2"
-                  aria-label="Slide 3"
-                ></button>
-              </div>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img
-                    loading="lazy"
-                    className={styles.imgStyle}
-                    src={rescue}
-                    alt="rescue-tux"
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    loading="lazy"
-                    className={styles.imgStyle}
-                    src={rescue1}
-                    alt="rescue-tux"
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    loading="lazy"
-                    className={styles.imgStyle}
-                    src={rescue2}
-                    alt="rescue-tux"
-                  />
-                </div>
-              </div>
-            </div>
+          <div className="w-4/5 py-5 px-5 md:w-2/5">
+            <Carousel images={[rescue, rescue1, rescue2]} />
           </div>
         </div>
       </>
@@ -301,72 +172,26 @@ export const eventsDetails = [
     id: "cyber-0-day",
     details: (
       <>
-        <div className={styles.box}>
-          <div className={styles.leftArea}>
-            <div
-              id="carouselExampleIndicators"
-              className={"carousel slide " + styles.imgStyle}
-              data-bs-ride="carousel"
-            >
-              <div class="carousel-indicators">
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide-to="0"
-                  class="active"
-                  aria-current="true"
-                  aria-label="Slide 1"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide-to="1"
-                  aria-label="Slide 2"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide-to="2"
-                  aria-label="Slide 3"
-                ></button>
-              </div>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img
-                    loading="lazy"
-                    className={styles.imgStyle}
-                    src={cyber}
-                    alt="cyber-o-day"
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    loading="lazy"
-                    className={styles.imgStyle}
-                    src={cyber1}
-                    alt="cyber-o-day"
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    loading="lazy"
-                    className={styles.imgStyle}
-                    src={cyber2}
-                    alt="cyber-o-day"
-                  />
-                </div>
-              </div>
-            </div>
+        <div className="flex flex-col justify-between md:flex-row">
+          <div className="w-4/5 py-5 px-5 md:w-2/5">
+            <Carousel images={[cyber, cyber1, cyber2]} />
           </div>
-          <div className={styles.rightArea}>
+          <div className="w-4/5 py-5 px-5 md:w-2/5">
             <p>
               The Linux Club at VIT Chennai, in collaboration with The
               Tech-Researchers Club, organized the <i>Cyber-0-Day</i> event from
               24th to 25th September 2022. The event saw the participation of
-              around <strong>100 participants</strong> in teams of 1-3, and was{" "}
-              <strong>sponsored by Rapido</strong>. The event began with a Linux
-              workshop by the President Beleswar Prasad Padhi and Vice President
-              Samridh Anand Paatni, followed by a cybersecurity quiz and lunch.
+              around{" "}
+              <strong className="italic font-bold text-[#ebcb8b]">
+                100 participants
+              </strong>{" "}
+              in teams of 1-3, and was{" "}
+              <strong className="italic font-bold text-[#ebcb8b]">
+                sponsored by Rapido
+              </strong>
+              . The event began with a Linux workshop by the President Beleswar
+              Prasad Padhi and Vice President Samridh Anand Paatni, followed by
+              a cybersecurity quiz and lunch.
             </p>
             <p>
               Later, participants enjoyed a CTF+Bug Bounty challenge, created by
@@ -381,17 +206,28 @@ export const eventsDetails = [
             <p>The top three teams that emerged victorious were as follows:</p>
             <ol>
               <li>
-                Team <strong>EchoHelloWorld</strong> (Zehran 21BPS1091, Christeo
-                21BCE1635 & Aditya 21BCE1431), who received a prize of X rs.
+                Team{" "}
+                <strong className="italic font-bold text-[#ebcb8b]">
+                  EchoHelloWorld
+                </strong>{" "}
+                (Zehran 21BPS1091, Christeo 21BCE1635 & Aditya 21BCE1431), who
+                received a prize of X rs.
               </li>
               <li>
-                Team <strong>HailAlan</strong> (Kushal Agrawal 22BPS1141, Ansh
-                Sharma 22BCE1338 & Shashwat Mishra 22BCE1853), who received a
-                prize of X rs.
+                Team{" "}
+                <strong className="italic font-bold text-[#ebcb8b]">
+                  HailAlan
+                </strong>{" "}
+                (Kushal Agrawal 22BPS1141, Ansh Sharma 22BCE1338 & Shashwat
+                Mishra 22BCE1853), who received a prize of X rs.
               </li>
               <li>
-                Team <strong>chill_sette</strong> (Naman 21BCE5852, Yash Singh
-                21BCE5760 & Sagar 21BCE5790), who received a prize of X rs.
+                Team{" "}
+                <strong className="italic font-bold text-[#ebcb8b]">
+                  chill_sette
+                </strong>{" "}
+                (Naman 21BCE5852, Yash Singh 21BCE5760 & Sagar 21BCE5790), who
+                received a prize of X rs.
               </li>
             </ol>
           </div>
@@ -406,8 +242,8 @@ export const eventsDetails = [
     id: "hackers-horizon",
     details: (
       <>
-        <div className={styles.box}>
-          <div className={styles.leftArea}>
+        <div className="flex flex-col justify-between md:flex-row">
+          <div className="w-4/5 py-5 px-5 md:w-2/5">
             <p>
               Linux Club, VIT Chennai successfully organised “Hackers Horizon” a
               two-day, full hands-on hacking session. Event was led by none
@@ -435,62 +271,7 @@ export const eventsDetails = [
               BugXs, which encouraged every team to put up their all-out effort.
             </p>
           </div>
-          <div className={styles.rightArea}>
-            <div
-              id="carouselExampleIndicators"
-              className={"carousel slide " + styles.imgStyle}
-              data-bs-ride="carousel"
-            >
-              <div class="carousel-indicators">
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide-to="0"
-                  class="active"
-                  aria-current="true"
-                  aria-label="Slide 1"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide-to="1"
-                  aria-label="Slide 2"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide-to="2"
-                  aria-label="Slide 3"
-                ></button>
-              </div>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img
-                    loading="lazy"
-                    className={styles.imgStyle}
-                    src={hacker}
-                    alt="hacker-horizon"
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    loading="lazy"
-                    className={styles.imgStyle}
-                    src={hacker1}
-                    alt="hacker-horizon"
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    loading="lazy"
-                    className={styles.imgStyle}
-                    src={hacker2}
-                    alt="hacker-horizon"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
+          <Carousel images={[hacker, hacker1, hacker2]} />
         </div>
       </>
     ),
@@ -502,16 +283,16 @@ export const eventsDetails = [
     id: "gsoc-made-easy",
     details: (
       <>
-        <div className={styles.box}>
-          <div className={styles.leftArea}>
+        <div className="flex flex-col justify-between md:flex-row">
+          <div className="w-4/5 py-5 px-5 md:w-2/5">
             <img
               loading="lazy"
               src={gsoc}
               alt="gsoc-made-easy"
-              className={styles.containImage}
+              className="w-4/5 md:w-2/5"
             />
           </div>
-          <div className={styles.rightArea}>
+          <div className="w-4/5 py-5 px-5 md:w-2/5">
             <p>
               Linux Club, VIT Chennai successfully organised “Google Summer of
               Code Made Easy” , purpose of the event was to guide students about
@@ -545,8 +326,8 @@ export const eventsDetails = [
     id: "linux-installation-booth",
     details: (
       <>
-        <div className={styles.box}>
-          <div className={styles.leftArea}>
+        <div className="flex flex-col justify-between md:flex-row">
+          <div className="w-4/5 py-5 px-5 md:w-2/5">
             <p>
               Linux Club, VIT Chennai successfully organised “LINUX INSTALLATION
               BOOTH”, where we helped students both install Linux OS and dual
@@ -565,61 +346,8 @@ export const eventsDetails = [
               events like this in the future.
             </p>
           </div>
-          <div className={styles.rightArea}>
-            <div
-              id="carouselExampleIndicators"
-              className={"carousel slide " + styles.imgStyle}
-              data-bs-ride="carousel"
-            >
-              <div class="carousel-indicators">
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide-to="0"
-                  class="active"
-                  aria-current="true"
-                  aria-label="Slide 1"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide-to="1"
-                  aria-label="Slide 2"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide-to="2"
-                  aria-label="Slide 3"
-                ></button>
-              </div>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img
-                    loading="lazy"
-                    className={styles.imgStyle}
-                    src={booth}
-                    alt="linux-booth"
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    loading="lazy"
-                    className={styles.imgStyle}
-                    src={booth1}
-                    alt="linux-booth"
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    loading="lazy"
-                    className={styles.imgStyle}
-                    src={booth2}
-                    alt="linux-booth"
-                  />
-                </div>
-              </div>
-            </div>
+          <div className="w-4/5 py-5 px-5 md:w-2/5">
+            <Carousel images={[booth, booth1, booth2]} />
           </div>
         </div>
       </>
@@ -632,80 +360,11 @@ export const eventsDetails = [
     id: "password", // id password
     details: (
       <>
-        <div className={styles.box}>
-          
-          <div className={styles.leftArea}>
-            <div
-              id="carouselExampleIndicators"
-              className={"carousel slide " + styles.imgStyle}
-              data-bs-ride="carousel"
-            >
-              <div class="carousel-indicators">
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide-to="0"
-                  class="active"
-                  aria-current="true"
-                  aria-label="Slide 1"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide-to="1"
-                  aria-label="Slide 2"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide-to="2"
-                  aria-label="Slide 3"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide-to="3"
-                  aria-label="Slide 4"
-                ></button>
-              </div>
-              <div class="carousel-inner">
-                <div class="carousel-item">
-                  <img
-                    loading="lazy"
-                    src={password_poster} // src
-                    alt="password"
-                    className={styles.containImage} // alt
-                  />
-                </div>
-                <div class="carousel-item active">
-                  <img
-                    loading="lazy"
-                    className={styles.imgStyle}
-                    src={pswdwinnerone}
-                    alt="winner"
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    loading="lazy"
-                    className={styles.imgStyle}
-                    src={pswdwinnertwo}
-                    alt="winner"
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    loading="lazy"
-                    className={styles.imgStyle}
-                    src={pswdwinnerthree}
-                    alt="winner"
-                  />
-                </div>
-              </div>
-              
-            </div>
+        <div className="flex flex-col justify-between md:flex-row">
+          <div className="w-4/5 py-5 px-5 md:w-2/5">
+            <Carousel images={[password_poster, pswdwinnerone, pswdwinnertwo, pswdwinnerthree]} />
           </div>
-          <div className={styles.rightArea}>
+          <div className="w-4/5 py-5 px-5 md:w-2/5">
             <p>
               "Password" in this event participants will have the opportunity to
               engage in hands-on workshops, where they can learn practical
@@ -735,4 +394,41 @@ export const eventsDetails = [
       </>
     ),
   },
+  {
+    number: "07",
+    name: "Cyber-0-Day 2.0", // name password
+    link: "lugvitc.github.io/#/events#cyber-o-day-2", // link password
+    id: "cod2", // id password
+    details: (
+      <>
+        <div className="flex flex-col justify-between md:flex-row">
+          <div className="w-4/5 py-5 px-5 md:w-2/5">
+            <Carousel images={[cyber21,cyber22]} />
+          </div>
+          <div className="w-4/5 py-5 px-5 md:w-2/5">
+            <p>
+            Cyber-0-Day 2.0, the flagship event of Technovit, took our future hackers on a riveting expedition into the world of cybersecurity. Held at the grand Netaji Auditorium, this 24-hour tech marathon was an unforgettable experience.
+            </p>
+            <p>
+            The event commenced with a knowledge-packed workshop covering five key topics: Linux fundamentals, OSINT reconnaissance, Web exploitation, cryptography, and Binary exploitation. Participants absorbed valuable insights and honed their skills during these interactive as well as hands-on sessions. Our tech team was active throughout the sessions assisting them with their doubts.
+            </p>
+            <p>
+            After the workshop, participants faced a challenging quiz that tested their grasp of the workshop topics. The top 20 teams which emerged victorious advanced to the final Capture The Flag (CTF) round, a nerve-wracking competition that pushed their skills to the limit. The CTF challenges were masterfully devised by our expert backend team.
+            </p>
+            <p>
+            From the CTF round, the top 10 teams proceeded to the Treasure Hunt, where they navigated a complex maze of clues and challenges. In the end, 3 teams emerged as the ultimate victor, winning a generous prize of a 5k, 3k, 2k INR Amazon gift vouchers respectively. The top 10 teams were awarded with exclusive hacking tools. 
+            </p>
+          </div>
+        </div>
+      </>
+    ),
+  },
 ];
+
+
+
+
+
+
+
+
