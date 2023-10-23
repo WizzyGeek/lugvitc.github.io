@@ -1,5 +1,6 @@
 import TerminalWindow from '../../components/terminal/terminalWindow';
 import { eventsDetails } from './eventsDetails';
+import eventStyles from './events.module.css';
 
 export default function Events() {
     return (
@@ -11,8 +12,8 @@ export default function Events() {
             title='Events'
         >
             {eventsDetails.map(({ number, name, details, id }, index) => (
-                <details key={index} id={id} className="">
-                    <summary className="text-[#d08770]">
+                <details key={index} id={id} className={eventStyles.event}>
+                    <summary className={eventStyles.name}>
                         {number}: {name}
                     </summary>
                     {details}
